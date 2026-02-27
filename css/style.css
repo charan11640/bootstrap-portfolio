@@ -1,0 +1,344 @@
+body {
+  padding-top: 70px;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+.custom-navbar {
+  background: linear-gradient(90deg, #00d4ff 0%, #0099ff 50%, #0066cc 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2);
+  padding: 1rem 0;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.custom-navbar .nav-link {
+  margin: 0 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #00ffff !important;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #00f0ff 0%, #0088ff 35%, #6a0dad 70%, #1a0033 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  bottom: -50px;
+  right: -50px;
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(10deg); }
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  font-size: 4.5rem;
+  animation: slideInDown 1s ease;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  animation: slideInUp 1s ease 0.2s both;
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.hero .mt-4 {
+  animation: fadeIn 1s ease 0.4s both;
+}
+
+@keyframes slideInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.feature-card {
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  background: white;
+}
+
+.feature-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2) !important;
+}
+
+.feature-card i {
+  transition: all 0.3s ease;
+  color: #00d4ff;
+}
+
+.feature-card:hover i {
+  color: #00ffff !important;
+  transform: scale(1.2) rotate(10deg);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00d4ff, #0099ff);
+  border: none;
+  padding: 12px 30px;
+  margin: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+}
+
+.btn-light, .btn-outline-light {
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-light:hover, .btn-outline-light:hover {
+  transform: scale(1.05);
+}
+
+/* Portfolio hover */
+.portfolio-item {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+.portfolio-item img {
+  transition: transform 0.4s ease;
+  height: 300px;
+  object-fit: cover;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Stats section */
+.stats-card {
+  padding: 40px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: scale(1.1);
+}
+
+/* Pricing cards */
+.pricing-card {
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border: 2px solid #e0e0e0 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card:hover {
+  border-color: #00d4ff !important;
+  transform: translateY(-15px);
+  box-shadow: 0 20px 50px rgba(0, 212, 255, 0.2) !important;
+}
+
+.pricing-card.featured {
+  border: 2px solid #00d4ff !important;
+  background: linear-gradient(135deg, #f0ffff, #e0f7ff);
+  transform: scale(1.02);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.07) translateY(-15px);
+  box-shadow: 0 25px 60px rgba(0, 212, 255, 0.3) !important;
+}
+
+.pricing-card h5 {
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+.pricing-card .btn {
+  margin-top: auto;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* CTA section */
+.cta-section {
+  background: linear-gradient(135deg, #00d4ff, #0099ff, #0066cc);
+  border-radius: 15px;
+  padding: 60px 40px;
+  color: white;
+}
+
+/* Testimonials */
+.testimonial {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.carousel-item {
+  padding: 40px 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* FAQ */
+.faq-item {
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #0d6efd;
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.1);
+}
+
+.faq-btn {
+  text-align: left;
+  padding: 20px;
+  border: none;
+  background: white;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.faq-btn:hover {
+  background: #f8f9fa;
+}
+
+/* Newsletter section */
+.newsletter-section {
+  background: linear-gradient(135deg, #f3f4f6, #ffffff);
+  padding: 60px 40px;
+  border-radius: 15px;
+}
+
+.newsletter-input {
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+footer {
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  margin-top: 60px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #ffd700;
+  transform: translateY(-3px);
+}
+
+footer .social-links {
+  font-size: 1.5rem;
+}
+
+footer .footer-links {
+  margin-top: 20px;
+}
+
+footer .footer-links a {
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00d4ff, #0099ff);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+}
+
+#backToTop:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.6);
+}
+
